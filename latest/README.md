@@ -1,8 +1,6 @@
-# TOOL NAME HERE
+# rocker_tidystan_vice
 
-## IMPORTANT: COPY THIS README.MD into every tagged folder in this repository
-
-INFORMATION ABOUT THE CONTAINER HERE
+This container is built on top of [CyVerse's RStudio Verse image](https://github.com/cyverse-vice/rstudio-verse), with Stan, `rstan`, `brms`, and `tidybayes` installed.
 
 SET UP CIRCLE CI
   
@@ -23,14 +21,14 @@ To run the RStudio container, you must first pull them from DockerHub, or activa
 A Docker container for running RStudio is hosted on DockerHub.
 
 ```
-docker pull cyversevice/<CONTAINER-NAME-HERE>:<TAG>
+docker pull harbor.cyverse.org/vice/rstudio/stan:latest
 ```
 
 ```
-docker run -it --rm -d cyversevice/<CONTAINER-NAME-HERE>:<TAG>
+docker run -it --rm -d harbor.cyverse.org/vice/rstudio/stan:latest
 ```
 
-The default username is `jovyan`
+The default username is `rstudio` and default password is `rstudio1`
 
 ## Run Docker container in CyVerse VICE
 
