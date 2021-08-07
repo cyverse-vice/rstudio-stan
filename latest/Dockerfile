@@ -17,8 +17,7 @@ RUN apt-get update \
     libproj-dev \
     libxml2 \
     libxml2-dev \
-    libglpk-dev \
-    xdg-utils
+    libglpk-dev
 
 # installing rstan
 RUN install2.r --error --deps TRUE \
