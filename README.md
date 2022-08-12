@@ -11,7 +11,6 @@ image | tag | size | metrics | build | status |
 <a href="https://de.cyverse.org/de/?type=quick-launch&quick-launch-id=19f6a94b-71b6-4034-a7a5-40f7bea0b85b&app-id=75773c76-8ee1-11e9-907f-008cfa5ae621" target="_blank"><img src="https://de.cyverse.org/Powered-By-CyVerse-blue.svg"></a> | [![](https://images.microbadger.com/badges/version/cyversevice/<CONTAINER-NAME-HERE>.svg)](https://microbadger.com/images/cyversevice/<CONTAINER-NAME-HERE> "<TAG>") |  [![](https://images.microbadger.com/badges/image/cyversevice/<CONTAINER-NAME-HERE>.svg)](https://microbadger.com/images/cyversevice/<CONTAINER-NAME-HERE> "<TAG>") | [![](https://img.shields.io/docker/pulls/cyversevice/<CONTAINER-NAME-HERE>.svg)](https://hub.docker.com/r/cyversevice/<CONTAINER-NAME-HERE>)  |  [![](https://img.shields.io/docker/cloud/automated/cyversevice/<CONTAINER-NAME-HERE>.svg)](https://hub.docker.com/r/cyversevice/<CONTAINER-NAME-HERE>/builds) | [![](https://img.shields.io/docker/build/cyversevice/<CONTAINER-NAME-HERE>.svg)](https://cloud.docker.com/u/cyversevice/repository/docker/cyversevice/<CONTAINER-NAME-HERE>)
 
 
-
 # Instructions
 
 ## Run Docker locally or on a Virtual Machine
