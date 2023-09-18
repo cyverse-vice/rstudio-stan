@@ -1,4 +1,4 @@
-FROM harbor.cyverse.org/vice/rstudio/verse
+FROM harbor.cyverse.org/vice/rstudio/verse:latest
 
 # copying the .R folder with Makevars
 COPY build_imports/.R /home/rstudio/.R
@@ -29,6 +29,15 @@ RUN install2.r --error --deps FALSE \
     Rcpp \
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
+# installing JAGS
+RUN install2.r --error --deps FALSE \
+    rjags \
+    && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
+
+# installing Rcpp
+RUN install2.r --error --deps FALSE \
+    reshape2 \
+    && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
 # need to get graph as a dep for igraph
 RUN R -e "BiocManager::install('graph')"
