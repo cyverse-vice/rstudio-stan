@@ -29,6 +29,8 @@ RUN install2.r --error --deps FALSE \
     Rcpp \
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
+RUN apt-get install jags 
+
 # installing JAGS
 RUN install2.r --error --deps FALSE \
     rjags \
