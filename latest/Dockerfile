@@ -6,18 +6,23 @@ COPY build_imports/.R /home/rstudio/.R
 # rstudio owns ~
 # RUN chown -R rstudio:rstudio /home/rstudio/
 
+USER root
+RUN apt-get install jags 
+
 # installing libs
-# RUN apt-get update \
-# 	&& apt-get install -y --no-install-recommends \
-#	clang \
-#    libv8-dev \
-#    libudunits2-dev \
-#    libgdal-dev \
-#    libgeos-dev \
-#    libproj-dev \
-#    libxml2 \
-#    libxml2-dev \
-#    libglpk-dev
+RUN apt-get update \
+	&& apt-get install -y --no-install-recommends \
+	clang \
+    libv8-dev \
+    libudunits2-dev \
+    libgdal-dev \
+    libgeos-dev \
+    libproj-dev \
+    libxml2 \
+    libxml2-dev \
+    libglpk-dev
+
+USER rstudio
 
 # installing rstan
 RUN install2.r --error --deps TRUE \
@@ -28,8 +33,6 @@ RUN install2.r --error --deps TRUE \
 RUN install2.r --error --deps FALSE \
     Rcpp \
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
-
-RUN apt-get install jags 
 
 # installing JAGS
 RUN install2.r --error --deps FALSE \
