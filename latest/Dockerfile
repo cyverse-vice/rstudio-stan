@@ -7,7 +7,7 @@ COPY build_imports/.R /home/rstudio/.R
 # RUN chown -R rstudio:rstudio /home/rstudio/
 
 USER root
-RUN apt-get install jags 
+RUN sudo apt-get install jags 
 
 # installing libs
 RUN apt-get update \
