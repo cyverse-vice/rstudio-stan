@@ -7,17 +7,17 @@ COPY build_imports/.R /home/rstudio/.R
 # RUN chown -R rstudio:rstudio /home/rstudio/
 
 # installing libs
-RUN apt-get update \
-	&& apt-get install -y --no-install-recommends \
-	clang \
-    libv8-dev \
-    libudunits2-dev \
-    libgdal-dev \
-    libgeos-dev \
-    libproj-dev \
-    libxml2 \
-    libxml2-dev \
-    libglpk-dev
+# RUN apt-get update \
+# 	&& apt-get install -y --no-install-recommends \
+#	clang \
+#    libv8-dev \
+#    libudunits2-dev \
+#    libgdal-dev \
+#    libgeos-dev \
+#    libproj-dev \
+#    libxml2 \
+#    libxml2-dev \
+#    libglpk-dev
 
 # installing rstan
 RUN install2.r --error --deps TRUE \
