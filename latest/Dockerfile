@@ -1,3 +1,5 @@
+# FOR FUTURE NOTICE: IF YOU WANT TO INSTALL PACKAGES HERE
+# INSTALL THEM INSTEAD IN RSTUDIO/VERSE
 FROM harbor.cyverse.org/vice/rstudio/verse:latest
 
 # copying the .R folder with Makevars
@@ -5,24 +7,6 @@ COPY build_imports/.R /home/rstudio/.R
 
 # rstudio owns ~
 # RUN chown -R rstudio:rstudio /home/rstudio/
-
-USER root
-RUN sudo apt-get install jags 
-
-# installing libs
-RUN apt-get update \
-	&& apt-get install -y --no-install-recommends \
-	clang \
-    libv8-dev \
-    libudunits2-dev \
-    libgdal-dev \
-    libgeos-dev \
-    libproj-dev \
-    libxml2 \
-    libxml2-dev \
-    libglpk-dev
-
-USER rstudio
 
 # installing rstan
 RUN install2.r --error --deps TRUE \
