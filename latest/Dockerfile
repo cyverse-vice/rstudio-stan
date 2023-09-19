@@ -4,7 +4,7 @@ FROM harbor.cyverse.org/vice/rstudio/verse:latest
 COPY build_imports/.R /home/rstudio/.R
 
 # rstudio owns ~
-RUN chown -R rstudio:rstudio /home/rstudio/
+# RUN chown -R rstudio:rstudio /home/rstudio/
 
 # installing libs
 RUN apt-get update \
