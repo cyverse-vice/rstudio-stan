@@ -50,3 +50,13 @@ RUN install2.r --error --deps TRUE \
     brms \
     tidybayes \
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
+
+# install mltools
+RUN install2.r --error --deps TRUE \
+    mltools \
+    && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
+
+# install FIESTA
+RUN install2.r --error --deps TRUE \
+    FIESTA \
+    && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
