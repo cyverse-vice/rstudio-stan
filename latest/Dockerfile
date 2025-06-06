@@ -8,6 +8,8 @@ COPY build_imports/.R /home/rstudio/.R
 # rstudio owns ~
 # RUN chown -R rstudio:rstudio /home/rstudio/
 
+RUN apt install cargo
+
 # installing rstan
 RUN install2.r --error --deps TRUE \
     rstan \
