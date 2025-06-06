@@ -1,6 +1,6 @@
 # FOR FUTURE NOTICE: IF YOU WANT TO INSTALL PACKAGES HERE
 # INSTALL THEM INSTEAD IN RSTUDIO/VERSE
-FROM harbor.cyverse.org/vice/rstudio/verse:latest
+FROM harbor.cyverse.org/vice/rstudio/geospatial:latest
 
 # copying the .R folder with Makevars
 COPY build_imports/.R /home/rstudio/.R
